@@ -129,5 +129,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# Stryker reports
+# Stryker
+.stryker-tmp/
 reports/

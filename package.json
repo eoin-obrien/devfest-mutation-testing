@@ -5,10 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:mutation": "stryker run"
+    "test:mutation": "stryker run",
+    "add": "npm run test:mutation -- --mutate src/add.js --ignorePatterns 'src/**/*.test.js','!src/add.test.js'",
+    "fancy-add": "npm run test:mutation -- --mutate src/fancy-add.js --ignorePatterns 'src/**/*.test.js','!src/fancy-add.test.js'",
+    "triangle-type-step-0": "npm run test:mutation -- --mutate src/triangle-type/index.js --ignorePatterns 'src/**/*.test.js','!src/**/pass-0.test.js'",
+    "triangle-type-step-1": "npm run test:mutation -- --mutate src/triangle-type/index.js --ignorePatterns 'src/**/*.test.js','!src/**/pass-1.test.js'",
+    "triangle-type-step-2": "npm run test:mutation -- --mutate src/triangle-type/index.js --ignorePatterns 'src/**/*.test.js','!src/**/pass-2.test.js'",
+    "triangle-type-step-3": "npm run test:mutation -- --mutate src/triangle-type/index.js --ignorePatterns 'src/**/*.test.js','!src/**/pass-3.test.js'",
+    "triangle-type-step-4": "npm run test:mutation -- --mutate src/triangle-type/index.js --ignorePatterns 'src/**/*.test.js','!src/**/pass-4.test.js'",
+    "triangle-type-step-5": "npm run test:mutation -- --mutate src/triangle-type/index.js --ignorePatterns 'src/**/*.test.js','!src/**/pass-5.test.js'"
   },
   "author": "Eoin O'Brien <eoin@tracworx.ai> (https://eoin.ai/)",
-  "license": "ISC",
+  "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@stryker-mutator/core": "^7.3.0",
     "@stryker-mutator/jest-runner": "^7.3.0",
